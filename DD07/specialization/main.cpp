@@ -1,49 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main2.cpp                                          :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: timvancitters <timvancitters@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/22 16:52:30 by timvancitte   #+#    #+#                 */
-/*   Updated: 2021/02/23 12:27:19 by timvancitte   ########   odam.nl         */
+/*   Created: 2021/02/23 13:02:15 by timvancitte   #+#    #+#                 */
+/*   Updated: 2021/02/23 13:05:17 by timvancitte   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Pair.class.tpp"
 
-template< typename T >
-class	List
+
+int			main(void)
 {
-	private:
+	Pair< int, int >			p1(4, 2);
+	Pair< std::string, float >	p2(std::string("Pi"), 3.14f);
+	Pair< float, bool >			p3(4.2f, true);
+	Pair< bool, bool >			p4(true, false);
 
-		T			*_content;
-		List< T >		*_next;
-		
-	public:
+	std::cout << p1 << std::endl;
+	std::cout << p2 << std::endl;
+	std::cout << p3 << std::endl;
+	std::cout << p4 << std::endl;
 
-		List< T >(T const &content)
-		{
-			//Etc..
-		}
-		List< T > (List<T> const &list)
-		{
-			//Etc..
-		}
-		~List< T >(void)
-		{
-			// Etc..
-		}
-	
-};
-
-
-int		main(void)
-{
-	List< int >				a(42);
-	List< float >			b(3.14f);
-	List< List< int > > 	c(a);
-
-	// Etc..
 	return (0);
 }

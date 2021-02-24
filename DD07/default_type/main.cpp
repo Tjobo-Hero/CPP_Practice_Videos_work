@@ -1,49 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main2.cpp                                          :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: timvancitters <timvancitters@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/22 16:52:30 by timvancitte   #+#    #+#                 */
-/*   Updated: 2021/02/23 12:27:19 by timvancitte   ########   odam.nl         */
+/*   Created: 2021/02/23 12:18:47 by timvancitte   #+#    #+#                 */
+/*   Updated: 2021/02/23 12:20:44 by timvancitte   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Vertex.class.tpp"
 
-template< typename T >
-class	List
+int			main(void)
 {
-	private:
+	Vertex< int >		v1(12, 23, 34);
+	Vertex<>			v2(12, 23, 34);
 
-		T			*_content;
-		List< T >		*_next;
-		
-	public:
+	std::cout << v1 << std::endl;
+	std::cout << v2 << std::endl;
 
-		List< T >(T const &content)
-		{
-			//Etc..
-		}
-		List< T > (List<T> const &list)
-		{
-			//Etc..
-		}
-		~List< T >(void)
-		{
-			// Etc..
-		}
-	
-};
-
-
-int		main(void)
-{
-	List< int >				a(42);
-	List< float >			b(3.14f);
-	List< List< int > > 	c(a);
-
-	// Etc..
 	return (0);
 }
